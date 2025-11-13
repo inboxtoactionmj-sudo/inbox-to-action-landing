@@ -1,28 +1,73 @@
-<section id="hero" style="padding:48px 20px;max-width:1100px;margin:0 auto;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;">
-  <div style="display:flex;flex-direction:column;gap:18px;">
-    <img src="/assets/M.png" alt="Inbox-to-Action Logo" style="width:160px;height:auto;display:block;">
-    <h1 style="font-size:32px;margin:0;color:#0b1226;">Inbox-to-Action — Antworten schreiben, priorisieren und planen in 10 Sekunden</h1>
-    <p style="font-size:18px;color:#39445a;margin:0;max-width:780px;">Mit einem Klick verwandelt Inbox-to-Action E‑Mails, Chats und Tickets in handlungsfertige Antworten, eine Prioritätseinschätzung und einen Terminvorschlag. Spare Zeit, reduziere Stress und halte deinen Posteingang leer.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;">
-      <a href="/beta" style="background:#0b67ff;color:#fff;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:600;">Beta testen — 7 Tage gratis</a>
-      <a href="#demo" style="background:transparent;color:#0b67ff;padding:12px 18px;border-radius:8px;border:1px solid #d6e4ff;text-decoration:none;font-weight:600;">Demo ansehen (60s)</a>
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inbox-to-Action — Landing</title>
+  <meta name="description" content="Inbox-to-Action Beta Anmeldung. Teste die Automatisierung für deine Inbox." />
+  <style>
+    :root{
+      --accent:#0b67ff;
+      --bg:#ffffff;
+      --text:#0b1226;
+      --muted:#64748b;
+      --radius:10px;
+      --max:980px;
+      --container-padding:24px;
+      font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;
+    }
+    html,body{height:100%;margin:0;background:var(--bg);color:var(--text)}
+    .wrap{max-width:var(--max);margin:36px auto;padding:var(--container-padding);}
+    header{display:flex;align-items:center;gap:18px}
+    .logo{width:160px;height:auto;display:block}
+    h1{font-size:28px;margin:12px 0 4px}
+    p.lead{margin:0 0 18px;color:var(--muted);max-width:640px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn{
+      display:inline-block;padding:12px 18px;border-radius:var(--radius);
+      text-decoration:none;font-weight:600;color:#fff;background:var(--accent);
+      box-shadow:0 6px 18px rgba(11,103,255,0.14);
+    }
+    .btn.secondary{
+      background:transparent;color:var(--accent);border:2px solid var(--accent);
+      box-shadow:none;
+    }
+    .card{margin-top:28px;padding:18px;border-radius:12px;background:#f8fafc;border:1px solid #eef2f7}
+    footer{margin-top:36px;color:var(--muted);font-size:13px}
+    @media (max-width:640px){
+      .logo{width:120px}
+      h1{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <!-- Logo: stelle sicher, dass /assets/M.png existiert -->
+      <img class="logo" src="/assets/M.png" alt="Inbox-to-Action Logo" />
+      <div>
+        <h1>Inbox-to-Action</h1>
+        <p class="lead">Automatisiere wiederkehrende Aufgaben aus E‑Mails. Teste die Beta, wir melden uns mit Zugang und Anweisungen.</p>
+      </div>
+    </header>
+
+    <div class="cta">
+      <!-- Beta Button: öffnet das Google Form in neuem Tab -->
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScuoW3XqmI4FXFaZy9r0NUoYD-SSTd2ZQ9_16yhUrU6wKROIQ/viewform?usp=header" target="_blank" rel="noopener">Beta testen — 7 Tage gratis</a>
+
+      <!-- Demo Button: ersetze die URL mit deiner YouTube‑oder-Demo‑URL -->
+      <a class="btn secondary" href="https://www.youtube.com/watch?v=DEINE_DEMO_URL" target="_blank" rel="noopener">Demo ansehen</a>
     </div>
-    <div style="display:flex;gap:18px;align-items:center;margin-top:20px;">
-      <div style="background:#f6f9ff;padding:14px;border-radius:12px;min-width:220px;">
-        <strong style="display:block;color:#0b1226;">Was es tut</strong>
-        <span style="color:#374b66;">Ein Klick → 3 handlungsfertige Vorschläge: kurze Antwort, Priorität, Terminvorschlag.</span>
-      </div>
-      <div style="background:#fff7f0;padding:14px;border-radius:12px;min-width:220px;border:1px solid #ffe8d6;">
-        <strong style="display:block;color:#0b1226;">Für wen</strong>
-        <span style="color:#374b66;">Solopreneure, Vertriebler, Support‑Teams & vielbeschäftigte Fachkräfte.</span>
-      </div>
-      <div style="background:#f0fff6;padding:14px;border-radius:12px;min-width:220px;border:1px solid #e6ffec;">
-        <strong style="display:block;color:#0b1226;">Nutzen</strong>
-        <span style="color:#374b66;">Messbare Zeitersparnis; schnelleres Follow‑up; klarer Posteingang.</span>
-      </div>
+
+    <div class="card" role="region" aria-label="Kurzbeschreibung">
+      <h2 style="margin:0 0 8px">So funktioniert die Beta</h2>
+      <p style="margin:0;color:var(--muted)">Melde dich an, wir senden dir Zugangsdaten. Teste 3–5 reale Nachrichten, gib kurzes Feedback — wir verbessern danach die Automatisierung für deinen Workflow.</p>
     </div>
+
+    <footer>
+      <p>© <strong>Inbox-to-Action</strong> — Marcel Bauers Projects</p>
+    </footer>
   </div>
-  <div id="social-proof" style="margin-top:22px;color:#64748b;font-size:14px;">
-    <span>Beta offen — limitierte Plätze. Über 100 Produktivitätsprofis warteten auf den Start.</span>
-  </div>
-</section>
+</body>
+</html>
+
