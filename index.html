@@ -1,78 +1,55 @@
-<!doctype html>
-<html lang="de">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Inbox-to-Action — Kompakt</title>
-  <meta name="description" content="Inbox-to-Action: Antworten, Priorisieren, Planen in Sekunden. Beta anmelden." />
-  <style>
-    :root{
-      --accent:#0b67ff;
-      --bg:#ffffff;
-      --text:#0b1226;
-      --muted:#64748b;
-      font-family: Inter, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
-    .wrap{max-width:980px;margin:28px auto;padding:20px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .mark{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,var(--accent),#094ecc);flex:0 0 48px}
-    .mark svg{width:26px;height:26px}
-    .word{font-weight:700;font-size:18px}
-    .tag{font-weight:500;color:var(--muted);font-size:12px}
-    h1{font-size:22px;margin:18px 0 8px}
-    p.lead{margin:0;color:var(--muted);max-width:72ch}
-    .ctas{display:flex;gap:10px;margin-top:14px}
-    .btn{padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;color:#fff;background:var(--accent);display:inline-block}
-    .btn.ghost{background:transparent;color:var(--accent);border:1.5px solid rgba(11,103,255,0.12)}
-    .card{margin-top:18px;padding:14px;border-radius:10px;background:#f8fafc;border:1px solid #eef2f7;color:var(--muted)}
-    footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
-    @media (max-width:640px){
-      header{flex-direction:column;align-items:flex-start;gap:10px}
-      .ctas{flex-wrap:wrap}
-    }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <div class="brand" aria-label="Inbox-to-Action">
-        <div class="mark" aria-hidden="true">
-          <!-- Einfaches, klares Markenzeichen -->
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mark">
-            <rect x="0" y="0" width="24" height="24" rx="5" fill="white" opacity="0.0"/>
-            <path d="M5 13 L9 9 L15 15" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          </svg>
-        </div>
-        <div>
-          <div class="word">Inbox-to-Action</div>
-          <div class="tag">Antworten · Priorisieren · Planen</div>
-        </div>
+<section id="hero" style="padding:48px 20px;max-width:1100px;margin:0 auto;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;">
+  <div style="display:flex;flex-direction:column;gap:18px;">
+    <!-- Inline SVG Logo (klares, kompaktes Markenzeichen + Wortmarke) -->
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div style="width:72px;height:72px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#0b67ff,#094ecc);flex:0 0 72px">
+        <svg viewBox="0 0 64 64" width="42" height="42" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Inbox-to-Action Logo" style="display:block">
+          <rect x="0" y="0" width="64" height="64" rx="12" fill="none"/>
+          <path d="M18 34 L28 24 L46 42" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="22" cy="22" r="3.4" fill="#ffffff"/>
+        </svg>
+      </div>
+      <div style="display:flex;flex-direction:column;line-height:1;">
+        <div style="font-weight:700;font-size:20px;color:#0b1226;">Inbox-to-Action</div>
+        <div style="font-size:13px;color:#64748b;margin-top:4px;">Antworten · Priorisieren · Planen</div>
+      </div>
+    </div>
+
+    <h1 style="font-size:32px;margin:0;color:#0b1226;">Inbox-to-Action — Antworten schreiben, priorisieren und planen in 10 Sekunden</h1>
+
+    <p style="font-size:18px;color:#39445a;margin:0;max-width:780px;">
+      Mit einem Klick verwandelt Inbox-to-Action E‑Mails, Chats und Tickets in handlungsfertige Antworten, eine Prioritätseinschätzung und einen Terminvorschlag. Spare Zeit, reduziere Stress und halte deinen Posteingang leer.
+    </p>
+
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScuoW3XqmI4FXFaZy9r0NUoYD-SSTd2ZQ9_16yhUrU6wKROIQ/viewform?usp=header"
+         style="background:#0b67ff;color:#fff;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:600;"
+         target="_blank" rel="noopener">Beta testen — 7 Tage gratis</a>
+
+      <a href="https://www.youtube.com/watch?v=DEINE_DEMO_URL"
+         style="background:transparent;color:#0b67ff;padding:12px 18px;border-radius:8px;border:1px solid #d6e4ff;text-decoration:none;font-weight:600;"
+         target="_blank" rel="noopener">Demo ansehen (60s)</a>
+    </div>
+
+    <div style="display:flex;gap:18px;align-items:center;margin-top:20px;flex-wrap:wrap;">
+      <div style="background:#f6f9ff;padding:14px;border-radius:12px;min-width:220px;">
+        <strong style="display:block;color:#0b1226;">Was es tut</strong>
+        <span style="color:#374b66;">Ein Klick → 3 handlungsfertige Vorschläge: kurze Antwort, Priorität, Terminvorschlag.</span>
       </div>
 
-      <div style="display:flex;gap:10px;align-items:center">
-        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScuoW3XqmI4FXFaZy9r0NUoYD-SSTd2ZQ9_16yhUrU6wKROIQ/viewform?usp=header" target="_blank" rel="noopener">Beta testen</a>
-        <a class="btn ghost" href="https://www.youtube.com/watch?v=DEINE_DEMO_URL" target="_blank" rel="noopener">Demo (60s)</a>
-      </div>
-    </header>
-
-    <main>
-      <h1>Antworten schreiben, priorisieren und planen — in Sekunden</h1>
-      <p class="lead">Inbox‑to‑Action verwandelt E‑Mails, Chats und Tickets in handlungsfertige Antworten, eine Prioritätseinschätzung und einen Terminvorschlag. Teste die Beta, wir melden uns innerhalb von 48 Stunden.</p>
-
-      <div class="ctas" role="region" aria-label="Call to action">
-        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScuoW3XqmI4FXFaZy9r0NUoYD-SSTd2ZQ9_16yhUrU6wKROIQ/viewform?usp=header" target="_blank" rel="noopener">Jetzt anmelden</a>
-        <a class="btn ghost" href="https://www.youtube.com/watch?v=DEINE_DEMO_URL" target="_blank" rel="noopener">Kurzdemo</a>
+      <div style="background:#fff7f0;padding:14px;border-radius:12px;min-width:220px;border:1px solid #ffe8d6;">
+        <strong style="display:block;color:#0b1226;">Für wen</strong>
+        <span style="color:#374b66;">Solopreneure, Vertriebler, Support‑Teams & vielbeschäftigte Fachkräfte.</span>
       </div>
 
-      <div class="card" role="note">
-        <strong>Beta‑Hinweis:</strong> Kurze Anmeldung, 3–5 Tests, optionales Feedbackgespräch. Keine Installation nötig.
+      <div style="background:#f0fff6;padding:14px;border-radius:12px;min-width:220px;border:1px solid #e6ffec;">
+        <strong style="display:block;color:#0b1226;">Nutzen</strong>
+        <span style="color:#374b66;">Messbare Zeitersparnis; schnelleres Follow‑up; klarer Posteingang.</span>
       </div>
-    </main>
-
-    <footer>© Inbox-to-Action — Marcel Bauers Projects</footer>
+    </div>
   </div>
-</body>
-</html>
+
+  <div id="social-proof" style="margin-top:22px;color:#64748b;font-size:14px;">
+    <span>Beta offen — limitierte Plätze. Über 100 Produktivitätsprofis warteten auf den Start.</span>
+  </div>
+</section>
