@@ -4,49 +4,27 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Inbox-to-Action — Beta</title>
-  <meta name="description" content="Beta anmelden: Inbox-to-Action verwandelt E-Mails in Antworten, Prioritäten und Terminvorschläge." />
   <style>
-    :root{
-      --accent:#0b67ff;
-      --accent-2:#094ecc;
-      --ice:#eaf7ff;
-      --text:#0b1226;
-      --muted:#39445a;
-      --radius:12px;
-      font-family: Inter, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;background:#fff;color:var(--text)}
+    :root{--accent:#0b67ff;--accent-2:#094ecc;--ice:#eaf7ff;--text:#0b1226;--muted:#39445a}
+    *{box-sizing:border-box} body{font-family:Arial,Helvetica,sans-serif;margin:0;color:var(--text);background:#fff}
     .wrap{max-width:1100px;margin:28px auto;padding:20px}
     header{display:flex;align-items:center;justify-content:space-between;gap:12px}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo-img{
-      width:56px;height:56px;border-radius:10px;display:block;object-fit:cover;
-      box-shadow:0 4px 12px rgba(11,103,255,0.12);
-      flex:0 0 56px;
-    }
+    .logo-box{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(180deg,var(--accent),var(--accent-2));box-shadow:0 8px 22px rgba(11,103,255,0.12)}
+    .check{display:inline-block;width:30px;height:18px;transform:rotate(-45deg);border-bottom:4px solid #fff;border-left:4px solid #fff;margin-top:3px;margin-left:2px}
     .title{font-weight:700;font-size:18px}
     .subtitle{font-size:13px;color:var(--muted)}
-    #hero{background:var(--ice);padding:36px;border-radius:var(--radius);margin-top:16px}
-    h1{font-size:28px;margin:0;color:var(--text)}
-    p.lead{margin:0;color:#39445a;font-size:16px;max-width:760px}
-    .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+    #hero{background:var(--ice);padding:28px;border-radius:12px;margin-top:16px}
     .btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;color:#fff;background:var(--accent)}
-    .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(11,103,255,0.14)}
-    .grid{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-    .card{background:#fff;padding:14px;border-radius:10px;border:1px solid #eef3fb;min-width:220px;color:var(--muted)}
     footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
-    /* Sicherstellen, dass das Logo sichtbar bleibt */
-    .logo-img, .logo-img + *{display:inline-block !important;visibility:visible !important;opacity:1 !important}
-    @media (max-width:720px){h1{font-size:22px}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <div class="brand" aria-label="Inbox-to-Action">
-        <!-- Logo: erwartet /assets/M.png -->
-        <img alt="Inbox-to-Action" src="/assets/M.png" class="logo-img">
+        <div class="logo-box" aria-hidden="true"><span class="check" aria-hidden="true"></span></div>
         <div>
           <div class="title">Inbox-to-Action</div>
           <div class="subtitle">Antworten · Priorisieren · Planen</div>
@@ -55,26 +33,13 @@
 
       <div style="display:flex;gap:12px;align-items:center">
         <a class="btn" href="#" target="_blank" rel="noopener">Beta anmelden — 7 Tage gratis</a>
-        <a class="btn ghost" href="#" target="_blank" rel="noopener">Demo (60s)</a>
       </div>
     </header>
 
     <main>
       <section id="hero" aria-labelledby="hero-title">
-        <div style="max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:14px">
-          <h1 id="hero-title">Inbox‑to‑Action: Antworten schreiben, priorisieren und planen — in Sekunden</h1>
-          <p class="lead">Teste die Beta — mit einem Klick werden Nachrichten in handlungsfähige Antworten und Terminvorschläge umgewandelt.</p>
-          <div class="ctas">
-            <a class="btn" href="#" target="_blank" rel="noopener">Zur Beta</a>
-            <a class="btn ghost" href="#" target="_blank" rel="noopener">Kurzdemo</a>
-          </div>
-
-          <div class="grid" role="list">
-            <div class="card" role="listitem"><strong>Was es tut</strong><div>Ein Klick → Antwort, Priorität & Terminvorschlag.</div></div>
-            <div class="card" role="listitem"><strong>Für wen</strong><div>Solopreneure, Vertrieb, Support & Fachkräfte.</div></div>
-            <div class="card" role="listitem"><strong>Nutzen</strong><div>Weniger Aufwand, schnelleres Follow‑up, strukturierter Posteingang.</div></div>
-          </div>
-        </div>
+        <h1 id="hero-title">Beta Zugang</h1>
+        <p class="lead">Trage dich ein und teste die Beta.</p>
       </section>
     </main>
 
