@@ -8,6 +8,7 @@
   <style>
     :root{
       --accent:#0b67ff;
+      --accent-2:#094ecc;
       --ice:#eaf7ff;
       --text:#0b1226;
       --muted:#39445a;
@@ -17,10 +18,9 @@
     *{box-sizing:border-box}
     html,body{height:100%;margin:0;background:#fff;color:var(--text)}
     .wrap{max-width:1100px;margin:28px auto;padding:20px}
-    .center{display:flex;align-items:center;gap:16px}
     header{display:flex;align-items:center;justify-content:space-between;gap:12px}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:56px;height:56px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,var(--accent),#094ecc);box-shadow:0 6px 18px rgba(11,103,255,0.12)}
+    .logo-box{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,var(--accent),var(--accent-2));box-shadow:0 8px 22px rgba(11,103,255,0.12)}
     .title{font-weight:700;font-size:18px}
     .subtitle{font-size:13px;color:var(--muted)}
     /* Hero */
@@ -34,27 +34,34 @@
     .grid{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
     .card{background:#fff;padding:14px;border-radius:10px;border:1px solid #eef3fb;min-width:220px;color:var(--muted)}
     footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
-    /* Force image visibility in case global CSS interferes */
-    img.logo-img{display:inline-block !important; visibility:visible !important; opacity:1 !important}
+    /* Force visibility for embedded elements */
+    img.logo-img, svg.logo-svg{display:inline-block !important; visibility:visible !important; opacity:1 !important}
     @media (max-width:720px){h1{font-size:22px}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="brand">
-        <div class="logo" aria-hidden="true">
-          <!-- Embedded logo as data-uri (sichtbar in allen Umgebungen) -->
-          <img class="logo-img" alt="Inbox-to-Action" width="40" height="40"
-               src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect rx='10' width='64' height='64' fill='%230b67ff'/><path d='M20 36 L30 26 L46 42' stroke='%23ffffff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
+      <div class="brand" aria-label="Inbox-to-Action">
+        <div class="logo-box" aria-hidden="true">
+          <!-- Weißes Logo als Inline SVG (kontraststark auf blauem Feld) -->
+          <svg class="logo-svg" viewBox="0 0 64 64" width="40" height="40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Inbox-to-Action Logo">
+            <!-- weiße Quadrat-Inlay für klare Kante -->
+            <rect x="8" y="8" width="48" height="48" rx="8" fill="#ffffff" />
+            <!-- weißes Häkchen / Icon -->
+            <path d="M20 36 L30 26 L46 42" stroke="#0b67ff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <!-- zusätzliches weißes Punkt zur Balance -->
+            <circle cx="24" cy="22" r="3.6" fill="#0b67ff"/>
+          </svg>
         </div>
+
         <div>
           <div class="title">Inbox-to-Action</div>
           <div class="subtitle">Antworten · Priorisieren · Planen</div>
         </div>
       </div>
 
-      <div class="center">
+      <div style="display:flex;gap:12px;align-items:center">
         <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScuoW3XqmI4FXFaZy9r0NUoYD-SSTd2ZQ9_16yhUrU6wKROIQ/viewform?usp=header" target="_blank" rel="noopener">Beta anmelden — 7 Tage gratis</a>
         <a class="btn ghost" href="https://www.youtube.com/watch?v=DEINE_DEMO_URL" target="_blank" rel="noopener">Demo (60s)</a>
       </div>
