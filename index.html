@@ -3,40 +3,59 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Inbox-to-Action — Home</title>
+  <title>Inbox-to-Action</title>
   <style>
-    :root{--accent:#0b67ff;--accent-2:#094ecc;--text:#0b1226;--muted:#39445a}
+    :root{--accent:#0b67ff;--accent-2:#094ecc;--muted:#39445a;--text:#0b1226}
     *{box-sizing:border-box} body{font-family:Arial,Helvetica,sans-serif;margin:0;color:var(--text);background:#fff}
-    .wrap{max-width:900px;margin:28px auto;padding:20px}
+    .wrap{max-width:1100px;margin:28px auto;padding:20px}
     header{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:flex;align-items:center;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
     .logo-box{width:56px;height:56px;border-radius:10px;display:flex;align-items:center;justify-content:center;
       background:linear-gradient(180deg,var(--accent),var(--accent-2));box-shadow:0 8px 22px rgba(11,103,255,0.12)}
     .check{display:inline-block;width:28px;height:18px;transform:rotate(-45deg);border-bottom:4px solid #fff;border-left:4px solid #fff;margin-top:3px;margin-left:2px}
-    a.button{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700}
+    nav a{margin-left:12px;text-decoration:none;color:var(--accent);padding:8px 12px;border-radius:8px}
+    nav a.primary{background:var(--accent);color:#fff}
     main{margin-top:18px}
+    .hero{background:#eaf7ff;padding:28px;border-radius:12px}
+    .cards{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
+    .card{background:#fff;padding:14px;border-radius:10px;border:1px solid #eef3fb;min-width:220px;color:var(--muted)}
     footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+    @media(max-width:720px){.cards{flex-direction:column}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="brand" aria-label="Inbox-to-Action">
+      <a class="brand" href="index.html">
         <div class="logo-box" aria-hidden="true"><span class="check" aria-hidden="true"></span></div>
         <div>
           <div style="font-weight:700">Inbox-to-Action</div>
-          <div style="font-size:13px;color:var(--muted)">Antworten · Priorisieren · Planen</div>
+          <div style="font-size:12px;color:var(--muted)">Antworten · Priorisieren · Planen</div>
         </div>
-      </div>
-      <nav><a class="button" href="beta.html">Zur Beta</a></nav>
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="beta.html" class="primary">Beta</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Kontakt</a>
+      </nav>
     </header>
 
     <main>
-      <h1>Willkommen</h1>
-      <p>Inbox-to-Action wandelt E‑Mails in Antworten, Prioritäten und Terminvorschläge.</p>
+      <section class="hero">
+        <h1>Inbox‑to‑Action — schneller arbeiten, weniger Stress</h1>
+        <p style="color:var(--muted)">Automatisierte Antworten, Priorisierung und Terminvorschläge für deinen Posteingang.</p>
+
+        <div class="cards" role="list">
+          <div class="card" role="listitem"><strong>Ein Klick</strong> Antworten & Termine vorschlagen</div>
+          <div class="card" role="listitem"><strong>Priorisieren</strong> Wich­tig, Dringend, Später</div>
+          <div class="card" role="listitem"><strong>Feedback</strong> Beta‑Teilnehmer helfen uns verbessern</div>
+        </div>
+      </section>
     </main>
 
-    <footer>© Inbox-to-Action</footer>
+    <footer>© Inbox-to-Action — Alle Rechte vorbehalten</footer>
   </div>
 </body>
 </html>
