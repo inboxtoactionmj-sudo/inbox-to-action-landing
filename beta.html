@@ -20,8 +20,22 @@
     .wrap{max-width:1100px;margin:28px auto;padding:20px}
     header{display:flex;align-items:center;justify-content:space-between;gap:12px}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo-box{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;
-      background:linear-gradient(180deg,var(--accent),var(--accent-2));box-shadow:0 8px 22px rgba(11,103,255,0.12);flex:0 0 64px}
+    /* Robustes Logo: blaues abgerundetes Feld mit weißem Häkchen (CSS-only) */
+    .logo-box{
+      width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(180deg,var(--accent),var(--accent-2));
+      box-shadow:0 8px 22px rgba(11,103,255,0.12);flex:0 0 64px;
+    }
+    .checkmark {
+      display:inline-block;
+      width:30px;
+      height:18px;
+      transform:rotate(-45deg);
+      border-bottom:4px solid #fff;
+      border-left:4px solid #fff;
+      margin-top:3px;
+      margin-left:2px;
+    }
     .title{font-weight:700;font-size:18px}
     .subtitle{font-size:13px;color:var(--muted)}
     /* Hero */
@@ -35,28 +49,15 @@
     .grid{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
     .card{background:#fff;padding:14px;border-radius:10px;border:1px solid #eef3fb;min-width:220px;color:var(--muted)}
     footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
-    /* Force visibility for embedded elements */
-    .logo-box, .logo-box *{display:inline-block !important; visibility:visible !important; opacity:1 !important}
+    /* Sicherstellen, dass das Logo nie ausgeblendet wird */
+    .logo-box, .logo-box *{display:inline-block !important;visibility:visible !important;opacity:1 !important}
     @media (max-width:720px){h1{font-size:22px}}
-
-    /* CSS-only checkmark to guarantee visibility (kein SVG nötig) */
-    .checkmark {
-      display:inline-block;
-      width:28px;
-      height:18px;
-      transform:rotate(-45deg);
-      border-bottom:4px solid #fff;
-      border-left:4px solid #fff;
-      margin-top:3px;
-      margin-left:2px;
-    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <div class="brand" aria-label="Inbox-to-Action">
-        <!-- Robustes Logo: blauer Box mit weißem Häkchen (CSS-only) -->
         <div class="logo-box" aria-hidden="true">
           <span class="checkmark" aria-hidden="true"></span>
         </div>
