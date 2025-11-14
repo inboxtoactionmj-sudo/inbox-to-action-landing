@@ -1,9 +1,16 @@
 <section id="hero" style="background:#eaf7ff;padding:36px 20px;max-width:1100px;margin:0 auto;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;border-radius:12px;">
+  <style>
+    /* Lokale Overrides nur für diesen Abschnitt, verhindert Ausblendung durch globale Regeln */
+    #hero svg{display:inline-block !important;visibility:visible !important;opacity:1 !important;mix-blend-mode:normal !important}
+    #hero svg *{fill:initial !important;stroke:initial !important}
+    #hero .logo-wrap{display:flex;align-items:center;gap:12px}
+  </style>
+
   <div style="display:flex;flex-direction:column;gap:14px;max-width:980px;margin:0 auto;">
     <!-- Kompakte Marke: klares Markenzeichen (Inline SVG) + Wortmarke -->
-    <div style="display:flex;align-items:center;gap:12px;">
+    <div class="logo-wrap" style="align-items:center;">
       <div style="width:56px;height:56px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#0b67ff,#094ecc);flex:0 0 56px">
-        <!-- Robust Inline SVG: großes weißes Feld mit blauem Icon -->
+        <!-- Sehr robuster Inline SVG: weißes Feld + blaue Formen (hoher Kontrast) -->
         <svg viewBox="0 0 64 64" width="36" height="36" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Inbox-to-Action Logo" style="display:block;mix-blend-mode:normal;opacity:1;">
           <rect x="6" y="6" width="52" height="52" rx="10" fill="#ffffff" />
           <path d="M20 36 L30 26 L46 42" stroke="#0b67ff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
