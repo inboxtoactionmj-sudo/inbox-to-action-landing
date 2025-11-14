@@ -6,19 +6,38 @@
   <title>Inbox-to-Action — Beta</title>
   <meta name="description" content="Beta anmelden: Inbox-to-Action verwandelt E-Mails in Antworten, Prioritäten und Terminvorschläge." />
   <style>
-    :root{--accent:#0b67ff;--accent-2:#094ecc;--ice:#eaf7ff;--text:#0b1226;--muted:#39445a;--radius:12px}
-    *{box-sizing:border-box}html,body{height:100%;margin:0;background:#fff;color:var(--text);font-family:Inter,system-ui,Arial,sans-serif}
+    :root{
+      --accent:#0b67ff;
+      --accent-2:#094ecc;
+      --ice:#eaf7ff;
+      --text:#0b1226;
+      --muted:#39445a;
+      --radius:12px;
+      font-family: Inter, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:#fff;color:var(--text)}
     .wrap{max-width:1100px;margin:28px auto;padding:20px}
     header{display:flex;align-items:center;justify-content:space-between;gap:12px}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo-img{width:56px;height:56px;border-radius:10px;display:block;object-fit:cover;box-shadow:0 4px 12px rgba(11,103,255,0.12)}
-    .title{font-weight:700;font-size:18px}.subtitle{font-size:13px;color:var(--muted)}
+    .logo-img{
+      width:56px;height:56px;border-radius:10px;display:block;object-fit:cover;
+      box-shadow:0 4px 12px rgba(11,103,255,0.12);
+      flex:0 0 56px;
+    }
+    .title{font-weight:700;font-size:18px}
+    .subtitle{font-size:13px;color:var(--muted)}
     #hero{background:var(--ice);padding:36px;border-radius:var(--radius);margin-top:16px}
-    h1{font-size:28px;margin:0;color:var(--text)}p.lead{margin:0;color:#39445a;font-size:16px;max-width:760px}
+    h1{font-size:28px;margin:0;color:var(--text)}
+    p.lead{margin:0;color:#39445a;font-size:16px;max-width:760px}
     .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
     .btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;color:#fff;background:var(--accent)}
     .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(11,103,255,0.14)}
+    .grid{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .card{background:#fff;padding:14px;border-radius:10px;border:1px solid #eef3fb;min-width:220px;color:var(--muted)}
     footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+    /* Sicherstellen, dass das Logo sichtbar bleibt */
+    .logo-img, .logo-img + *{display:inline-block !important;visibility:visible !important;opacity:1 !important}
     @media (max-width:720px){h1{font-size:22px}}
   </style>
 </head>
@@ -26,8 +45,8 @@
   <div class="wrap">
     <header>
       <div class="brand" aria-label="Inbox-to-Action">
-        <!-- Logo: Datei muss unter /assets/M.png liegen -->
-        <img alt="Inbox-to-Action" src="/assets/Xivf5XcC66KzZnGuVSxYB.png" class="logo-img">
+        <!-- Logo: erwartet /assets/M.png -->
+        <img alt="Inbox-to-Action" src="/assets/M.png" class="logo-img">
         <div>
           <div class="title">Inbox-to-Action</div>
           <div class="subtitle">Antworten · Priorisieren · Planen</div>
@@ -48,6 +67,12 @@
           <div class="ctas">
             <a class="btn" href="#" target="_blank" rel="noopener">Zur Beta</a>
             <a class="btn ghost" href="#" target="_blank" rel="noopener">Kurzdemo</a>
+          </div>
+
+          <div class="grid" role="list">
+            <div class="card" role="listitem"><strong>Was es tut</strong><div>Ein Klick → Antwort, Priorität & Terminvorschlag.</div></div>
+            <div class="card" role="listitem"><strong>Für wen</strong><div>Solopreneure, Vertrieb, Support & Fachkräfte.</div></div>
+            <div class="card" role="listitem"><strong>Nutzen</strong><div>Weniger Aufwand, schnelleres Follow‑up, strukturierter Posteingang.</div></div>
           </div>
         </div>
       </section>
