@@ -3,55 +3,76 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Inbox-to-Action — Automatisiere Antworten & Priorisierung</title>
-  <meta name="description" content="Inbox-to-Action verwandelt E‑Mails in handlungsfertige Antworten, Prioritäten und Terminvorschläge — Teste die Beta." />
+  <title>Inbox-to-Action — Kompakt</title>
+  <meta name="description" content="Inbox-to-Action: Antworten, Priorisieren, Planen in Sekunden. Beta anmelden." />
   <style>
     :root{
       --accent:#0b67ff;
       --bg:#ffffff;
-      --muted:#64748b;
       --text:#0b1226;
-      --card:#f8fafc;
-      font-family: Inter, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --muted:#64748b;
+      font-family: Inter, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
     }
     *{box-sizing:border-box}
     html,body{height:100%;margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
-    .page{max-width:1100px;margin:36px auto;padding:24px}
-    header{display:flex;align-items:center;gap:20px}
-    /* logo container */
-    .logo-wrap{display:flex;align-items:center;gap:16px}
-    .logo-mark{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,var(--accent),#094ecc);flex:0 0 64px}
-    .logo-mark svg{width:38px;height:38px;display:block}
-    .wordmark{font-weight:700;color:var(--text);font-size:20px;line-height:1;margin:0}
-    .wordmark .muted{display:block;font-weight:500;color:var(--muted);font-size:13px;margin-top:4px}
-    h1{font-size:28px;margin:8px 0 6px;line-height:1.06}
-    p.lead{margin:0 0 18px;color:var(--muted);max-width:66ch;font-size:16px}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
-    .btn{
-      display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;color:#fff;background:var(--accent);
-      box-shadow:0 8px 24px rgba(11,103,255,0.12);
-    }
-    .btn.ghost{background:transparent;color:var(--accent);border:2px solid rgba(11,103,255,0.12)}
-    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start;margin-top:18px}
-    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid #eef2f7}
-    footer{margin-top:36px;color:var(--muted);font-size:13px;text-align:center}
-    @media (max-width:980px){
-      .hero-grid{grid-template-columns:1fr}
-    }
+    .wrap{max-width:980px;margin:28px auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .mark{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,var(--accent),#094ecc);flex:0 0 48px}
+    .mark svg{width:26px;height:26px}
+    .word{font-weight:700;font-size:18px}
+    .tag{font-weight:500;color:var(--muted);font-size:12px}
+    h1{font-size:22px;margin:18px 0 8px}
+    p.lead{margin:0;color:var(--muted);max-width:72ch}
+    .ctas{display:flex;gap:10px;margin-top:14px}
+    .btn{padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;color:#fff;background:var(--accent);display:inline-block}
+    .btn.ghost{background:transparent;color:var(--accent);border:1.5px solid rgba(11,103,255,0.12)}
+    .card{margin-top:18px;padding:14px;border-radius:10px;background:#f8fafc;border:1px solid #eef2f7;color:var(--muted)}
+    footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
     @media (max-width:640px){
-      .logo-mark{width:56px;height:56px}
-      .wordmark{font-size:18px}
-      h1{font-size:22px}
+      header{flex-direction:column;align-items:flex-start;gap:10px}
+      .ctas{flex-wrap:wrap}
     }
   </style>
 </head>
 <body>
-  <div class="page">
+  <div class="wrap">
     <header>
-      <div class="logo-wrap" aria-label="Inbox-to-Action Logo">
-        <div class="logo-mark" aria-hidden="true">
-          <!-- simplified, high-contrast mark -->
-          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mark">
-            <rect x="0" y="0" width="64" height="64" rx="12" fill="none"/>
-            <path d="M18 36 L28 26 L44 42" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            <circle cx="22" cy="24" r="3.2" fill="#ffffff"/>
+      <div class="brand" aria-label="Inbox-to-Action">
+        <div class="mark" aria-hidden="true">
+          <!-- Einfaches, klares Markenzeichen -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mark">
+            <rect x="0" y="0" width="24" height="24" rx="5" fill="white" opacity="0.0"/>
+            <path d="M5 13 L9 9 L15 15" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <div>
+          <div class="word">Inbox-to-Action</div>
+          <div class="tag">Antworten · Priorisieren · Planen</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScuoW3XqmI4FXFaZy9r0NUoYD-SSTd2ZQ9_16yhUrU6wKROIQ/viewform?usp=header" target="_blank" rel="noopener">Beta testen</a>
+        <a class="btn ghost" href="https://www.youtube.com/watch?v=DEINE_DEMO_URL" target="_blank" rel="noopener">Demo (60s)</a>
+      </div>
+    </header>
+
+    <main>
+      <h1>Antworten schreiben, priorisieren und planen — in Sekunden</h1>
+      <p class="lead">Inbox‑to‑Action verwandelt E‑Mails, Chats und Tickets in handlungsfertige Antworten, eine Prioritätseinschätzung und einen Terminvorschlag. Teste die Beta, wir melden uns innerhalb von 48 Stunden.</p>
+
+      <div class="ctas" role="region" aria-label="Call to action">
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScuoW3XqmI4FXFaZy9r0NUoYD-SSTd2ZQ9_16yhUrU6wKROIQ/viewform?usp=header" target="_blank" rel="noopener">Jetzt anmelden</a>
+        <a class="btn ghost" href="https://www.youtube.com/watch?v=DEINE_DEMO_URL" target="_blank" rel="noopener">Kurzdemo</a>
+      </div>
+
+      <div class="card" role="note">
+        <strong>Beta‑Hinweis:</strong> Kurze Anmeldung, 3–5 Tests, optionales Feedbackgespräch. Keine Installation nötig.
+      </div>
+    </main>
+
+    <footer>© Inbox-to-Action — Marcel Bauers Projects</footer>
+  </div>
+</body>
+</html>
