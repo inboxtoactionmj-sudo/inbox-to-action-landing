@@ -3,20 +3,61 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Beta anmelden — Inbox-to-Action</title>
+  <title>Beta Anmeldung — Inbox-to-Action</title>
+  <meta name="description" content="Melde dich zur Inbox-to-Action Beta an. Kurzes Formular, schneller Zugang." />
   <style>
-    body{font-family:Inter,system-ui,Arial,sans-serif;padding:40px;background:#fff;color:#0b1226}
-    .container{max-width:700px;margin:0 auto;text-align:center}
-    .btn{display:inline-block;background:#0b67ff;color:#fff;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:600}
-    .muted{color:#64748b;margin-top:10px}
+    :root{
+      --accent:#0b67ff;
+      --bg:#ffffff;
+      --text:#0b1226;
+      --muted:#64748b;
+      --card:#f8fafc;
+      --radius:12px;
+      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    }
+    html,body{height:100%;margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:820px;margin:48px auto;padding:24px}
+    .card{background:var(--card);padding:28px;border-radius:var(--radius);border:1px solid #eef2f7}
+    h1{margin:0 0 8px;font-size:26px}
+    p.lead{margin:0 0 18px;color:var(--muted)}
+    .btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;color:#fff;background:var(--accent)}
+    .note{margin-top:14px;color:var(--muted);font-size:14px}
+    footer{margin-top:22px;color:var(--muted);font-size:13px;text-align:center}
+    a.inline{color:var(--accent);text-decoration:none;font-weight:600}
+    @media (max-width:640px){
+      .wrap{margin:20px;padding:16px}
+      h1{font-size:20px}
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Beta anmelden</h1>
-    <p>Danke — du bist einen Schritt entfernt. Klicke auf den Button, um das Formular / die Info zu öffnen.</p>
-    <p><a class="btn" href="https://docs.google.com/document/d/1FXtiENaRxZ53Leo_kX5TTe7_RJfkbuRiIx7dMDfL01Y/edit?usp=sharing" target="_blank" rel="noopener">Zum Formular / Info</a></p>
-    <p class="muted">Falls du Probleme hast, antworte einfach auf die Einladungs‑E‑Mail oder kontaktiere uns direkt.</p>
-  </div>
+  <main class="wrap" role="main" aria-labelledby="beta-title">
+    <div class="card" role="region" aria-label="Beta Anmeldung">
+      <h1 id="beta-title">Beta Anmeldung — Inbox-to-Action</h1>
+      <p class="lead">Danke für dein Interesse! Klicke auf den Button, um das kurze Anmeldeformular zu öffnen. Wir schicken dir den Zugang innerhalb von 48 Stunden.</p>
+
+      <!-- Direktlink zum Google Form (öffnet in neuem Tab) -->
+      <p>
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScuoW3XqmI4FXFaZy9r0NUoYD-SSTd2ZQ9_16yhUrU6wKROIQ/viewform?usp=header" target="_blank" rel="noopener">Zum Beta‑Formular öffnen</a>
+      </p>
+
+      <p class="note">Alternativ kannst du das Formular auch direkt hier ausfüllen, wenn wir es eingebettet haben. Falls du Probleme beim Öffnen siehst, prüfe bitte deine Browser‑Popup‑/Blocker‑Einstellungen oder öffne den Link in einem Inkognito‑Fenster.</p>
+
+      <hr style="border:none;border-top:1px solid #eef2f7;margin:18px 0">
+
+      <h2 style="margin:0 0 8px">Was wir von Beta‑Testern erwarten</h2>
+      <ul style="margin:8px 0 0;color:var(--muted)">
+        <li>Kurzes Feedback nach 3–5 Tests</li>
+        <li>Optional: Teilen einer anonymisierten Beispiel‑Nachricht</li>
+        <li>Optional: Kurzes 10–15 min Interview zur Verbesserung</li>
+      </ul>
+
+      <p class="note">Wenn du Fragen hast, antworte bitte auf die Bestätigungs‑E‑Mail, die du nach der Anmeldung erhältst.</p>
+    </div>
+
+    <footer>
+      © <strong>Inbox-to-Action</strong> — Marcel Bauers Projects
+    </footer>
+  </main>
 </body>
 </html>
