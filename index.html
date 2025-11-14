@@ -43,13 +43,9 @@
   <div class="wrap">
     <header>
       <div class="brand" aria-label="Inbox-to-Action">
+        <!-- Ersetzt: vorher Inline-SVG. Jetzt stabiler Data-URI img -->
         <div class="mark" aria-hidden="true">
-          <!-- Inline SVG Logo: kontraststark, sollte immer sichtbar sein -->
-          <svg viewBox="0 0 64 64" width="36" height="36" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Inbox-to-Action Logo" style="display:block">
-            <rect x="6" y="6" width="52" height="52" rx="10" fill="#ffffff"/>
-            <path d="M20 36 L30 26 L46 42" stroke="#0b67ff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            <circle cx="24" cy="24" r="3.8" fill="#0b67ff"/>
-          </svg>
+          <img alt="Inbox-to-Action" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 64 64'><rect rx='10' width='64' height='64' fill='%230b67ff'/><path d='M20 36 L30 26 L46 42' stroke='%23ffffff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>" style="width:56px;height:56px;border-radius:10px;display:block;box-shadow:0 4px 12px rgba(11,103,255,0.12);">
         </div>
         <div>
           <div class="word">Inbox-to-Action</div>
