@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Inbox-to-Action — Beta</title>
+  <title>Inbox-to-Action — Beta (Deutsch)</title>
   <style>
     :root{--accent:#0b67ff;--accent-2:#094ecc;--muted:#39445a;--text:#0b1226}
     *{box-sizing:border-box} body{font-family:Arial,Helvetica,sans-serif;margin:0;color:var(--text);background:#fff}
@@ -15,6 +15,7 @@
     nav a{padding:8px 12px;border-radius:8px;text-decoration:none}
     nav a.primary{background:var(--accent);color:#fff}
     nav a.link{background:#fff;border:1px solid var(--accent);color:var(--accent)}
+    select{padding:6px;border-radius:6px}
     main{margin-top:18px}
     footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
   </style>
@@ -22,7 +23,7 @@
 <body>
   <div class="wrap">
     <header>
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.de.html">
         <img src="assets/M.png" alt="Inbox-to-Action" class="logo-img"
              onerror="this.style.display='none';document.getElementById('cssLogoB').style.display='flex'">
         <div id="cssLogoB" style="display:none;width:64px;height:64px;border-radius:12px;background:linear-gradient(180deg,#0b67ff,#094ecc);display:flex;align-items:center;justify-content:center">
@@ -35,11 +36,15 @@
       </a>
 
       <nav>
-        <a href="index.html">Home</a>
-        <a href="beta.html" class="primary">Beta</a>
+        <a href="index.de.html">Home</a>
+        <a href="beta.de.html" class="primary">Beta</a>
         <a href="https://docs.google.com/forms/d/194qB0I0uNeXzpsWhzs8eK81mq-tlgqG5g6ndWiYEBp8/viewform" target="_blank" rel="noopener" class="link">Formular</a>
         <a href="https://www.youtube.com/watch?v=DEMO" target="_blank" rel="noopener" class="link">Demo</a>
         <a href="mailto:inbox.to.action.mj@gmail.com" class="primary">Kontakt</a>
+        <select onchange="location.href=this.value">
+          <option value="beta.de.html" selected>Deutsch</option>
+          <option value="beta.en.html">English</option>
+        </select>
       </nav>
     </header>
 
