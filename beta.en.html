@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inbox-to-Action — Beta (English)</title>
+  <style>
+    :root{--accent:#0b67ff;--accent-2:#094ecc;--muted:#39445a;--text:#0b1226}
+    *{box-sizing:border-box} body{font-family:Arial,Helvetica,sans-serif;margin:0;color:var(--text);background:#fff}
+    .wrap{max-width:1100px;margin:28px auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+    .logo-img{width:64px;height:64px;border-radius:12px;object-fit:cover;box-shadow:0 8px 26px rgba(11,103,255,0.12)}
+    nav{display:flex;align-items:center;gap:10px}
+    nav a{padding:8px 12px;border-radius:8px;text-decoration:none}
+    nav a.primary{background:var(--accent);color:#fff}
+    nav a.link{background:#fff;border:1px solid var(--accent);color:var(--accent)}
+    select{padding:6px;border-radius:6px}
+    main{margin-top:18px}
+    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="index.en.html">
+        <img src="assets/M.png" alt="Inbox-to-Action" class="logo-img"
+             onerror="this.style.display='none';document.getElementById('cssLogoB').style.display='flex'">
+        <div id="cssLogoB" style="display:none;width:64px;height:64px;border-radius:12px;background:linear-gradient(180deg,#0b67ff,#094ecc);display:flex;align-items:center;justify-content:center">
+          <span style="display:inline-block;width:30px;height:18px;transform:rotate(-45deg);border-bottom:4px solid #fff;border-left:4px solid #fff"></span>
+        </div>
+        <div>
+          <div style="font-weight:700">Inbox-to-Action</div>
+          <div style="font-size:12px;color:#39445a">Reply · Prioritize · Plan</div>
+        </div>
+      </a>
+
+      <nav>
+        <a href="index.en.html">Home</a>
+        <a href="beta.en.html" class="primary">Beta</a>
+        <a href="https://docs.google.com/forms/d/194qB0I0uNeXzpsWhzs8eK81mq-tlgqG5g6ndWiYEBp8/viewform" target="_blank" rel="noopener" class="link">Form</a>
+        <a href="https://www.youtube.com/watch?v=DEMO" target="_blank" rel="noopener" class="link">Demo</a>
+        <a href="mailto:inbox.to.action.mj@gmail.com" class="primary">Contact</a>
+        <select onchange="location.href=this.value">
+          <option value="beta.de.html">Deutsch</option>
+          <option value="beta.en.html" selected>English</option>
+        </select>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Beta Registration</h1>
+      <p style="color:var(--muted)">Test the features and send feedback.</p>
+      <p><a href="https://docs.google.com/forms/d/194qB0I0uNeXzpsWhzs8eK81mq-tlgqG5g6ndWiYEBp8/viewform" target="_blank" rel="noopener" class="primary">Register now</a></p>
+      <p><a href="https://www.youtube.com/watch?v=DEMO" target="_blank" rel="noopener" class="link">YouTube Demo</a></p>
+    </main>
+
+    <footer>© Inbox-to-Action — Contact: inbox.to.action.mj@gmail.com</footer>
+  </div>
+</body>
+</html>
